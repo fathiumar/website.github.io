@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: whitesmoke;
+    background-color: rgb(6, 1, 27);
+}
+header {
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    background-color: rgb(4, 1, 17);
+    border-radius: 0 0 3vh 3vh;
+}
+.site-name, .nav-links, .sign-up {
+    display: flex;
+    margin-left: 5vh;
+}
+.site-name {
+    flex: 0.5;
+    justify-content: flex-start;
+    font-size: 24px;
+}
+nav {
+    flex: 3;
+}
+.nav-links {
+    justify-content: space-around;
+    list-style-type: none;
+}
+.nav-link {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 0.35s ease;
+}
+.nav-link:hover {
+    font-weight: bold;
+    font-size: 18px;
+}
+.sign-up {
+    flex: 0.5;
+    justify-content: flex-end;
+    margin-right: 5vh;
+}
+.sign {
+    width: 15vh;
+    height: 5vh;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5vh;
+    color: rgb(4, 1, 17);
+    font-weight: bold;
+    transition: 0.35s ease;
+}
+.sign:hover {
+    color: whitesmoke;
+    background-color: unset;
+    border: solid 3px whitesmoke;
+}
+
+/*main content*/
+
+.presentation {
+    display: flex;
+    width: 90%;
+    height: 80vh;
+    margin: auto;
+    align-items: center;
+}
+.introduction {
+    flex: 1;
+    margin-left: 8vh;
+    margin-right: 8vh;
+    animation: drop 1s ease;
+}
+.intro-text h4 {
+    font-size: 58px;
+    margin-bottom: 0.6vh;
+}
+.intro-text p {
+    font-size: 24px;
+    margin-bottom: 3vh;
+}
+.learn .learn-more {
+    font-size: 17px;
+    font-weight: bold;
+    color: whitesmoke;
+    width: 20vh;
+    height: 8vh;
+    border: solid 4px whitesmoke;
+    border-radius: 5vh;
+    background-color: unset;
+    transition: 0.35s ease;
+}
+.learn .learn-more:hover {
+    border: none;
+    background-color: whitesmoke;
+    color: rgb(4, 1, 17);
+}
+.cover {
+    flex: 1;
+    animation: drop 1s ease;
+}
+.cover img {
+    max-width: 70vh;
+    border-radius: 5%;
+}
+@keyframes drop {
+    0% {
+        margin-top: -4vh;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+/*responsive*/
+
+@media only screen and (max-width: 1060px) {
+    .intro-text h4 {
+        font-size: 50px;
+    }
+    .intro-text p {
+        font-size: 20px;
+    }
+    .cover img {
+        width: 60vh;
+    }
+}
+@media only screen and (max-width: 932px) {
+    .intro-text h4 {
+        font-size: 36px;
+    }
+    .cover img {
+        width: 50vh;
+    }
+}
+@media only screen and (max-width: 768px) {
+    * {
+        font-size: 14px;
+    }
+    .nav-link:hover {
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .site-name {
+        font-size: 18px;
+    }
+    .presentation {
+        display: block;
+    }
+    .intro-text {
+        text-align: center;
+        margin-top: 5%;
+    }
+    .intro-text h4 {
+        font-size: 48px;
+    }
+    .learn {
+        text-align: center;
+    }
+    .cover {
+        text-align: center;
+        margin-top: 5vh;
+    }
+    .cover img {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 655px) {
+    header {
+        height: 8vh;
+    }
+    .nav-link, .sign {
+        font-size: 12px;
+    }
+    .nav-link:hover {
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .sign {
+        width: 12vh;
+        height: 4vh;
+    }
+    .intro-text h4 {
+        font-size: 36px;
+    }
+    .intro-text p {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 508px) {
+    header {
+        height: 5vh;
+    }
+    .site-name h4 {
+        font-size: 11px;
+    }
+    .nav-link, .sign {
+        font-size: 9px;
+    }
+    .nav-link:hover {
+        font-weight: bold;
+        font-size: 11px;
+    }
+    .sign {
+        width: 9vh;
+        height: 3vh;
+    }
+    .sign:hover {
+        border-width: 2px;
+    }
+    .intro-text h4 {
+        font-size: 28px;
+    }
+    .intro-text p {
+        font-size: 12px;
+    }
+    .learn .learn-more {
+        font-size: 12px;
+        width: 15vh;
+        height: 6vh;
+        border-width: 2px;
+    }
+    .cover {
+        margin-top: 2vh;
+    }
+}
+@media only screen and (max-width: 460px) {
+    header {
+        height: 5vh;
+    }
+    .site-name h4 {
+        font-size: 8px;
+    }
+    .nav-link, .sign {
+        font-size: 6px;
+    }
+    .nav-link:hover {
+        font-weight: bold;
+        font-size: 8px;
+    }
+    .sign {
+        width: 9vh;
+        height: 3vh;
+    }
+    .sign:hover {
+        border-width: 1px;
+    }
+    .intro-text h4 {
+        font-size: 20px;
+    }
+    .intro-text p {
+        font-size: 9px;
+    }
+    .learn .learn-more {
+        border-width: 1px;
+        font-size: 9px;
+        width: 10vh;
+        height: 4vh;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .site-name h4 {
+        font-size: 6px;
+    }
+    .nav-link, .sign {
+        font-size: 4px;
+    }
+    .nav-link:hover {
+        font-weight: bold;
+        font-size: 6px;
+    }
+    .sign {
+        width: 7vh;
+        height: 2vh;
+    }
+    .sign:hover {
+        border-width: 0.6px;
+    }
+    .intro-text h4 {
+        font-size: 16px;
+    }
+    .intro-text p {
+        font-size: 7px;
+        margin-bottom: 0.5vh;
+    }
+    .learn .learn-more {
+        border-width: 0.5px;
+        font-size: 6px;
+        width: 8vh;
+        height: 3vh;
+    }
+    .cover {
+        margin-top: 1vh;
+    }
+}
+@media only screen and (max-width: 350px) {
+    header {
+        height: 3vh;
+        border-radius: 0 0 1vh 1vh;
+    }
+    .site-name h4 {
+        font-size: 4px;
+    }
+    .nav-link, .sign {
+        font-size: 2px;
+    }
+    .nav-link:hover {
+        font-weight: bold;
+        font-size: 4px;
+    }
+    .sign {
+        width: 5vh;
+        height: 0.4vh;
+    }
+    .sign:hover {
+        border-width: 0.4px;
+    }
+    .intro-text h4 {
+        font-size: 13px;
+    }
+    .intro-text p {
+        font-size: 6px;
+        margin-bottom: 0.5vh;
+    }
+    .learn .learn-more {
+        border-width: 0.5px;
+        font-size: 4px;
+        width: 8vh;
+        height: 3vh;
+    }
+    .cover {
+        margin-top: 1vh;
+    }
+}
+@media only screen and (max-width: 260px) {
+    header {
+        height: 2vh;
+        border-radius: 0 0 1vh 1vh;
+    }
+    .site-name h4 {
+        font-size: 2px;
+    }
+    .nav-link, .sign {
+        font-size: 0.5px;
+        align-items: center;
+    }
+    .nav-link:hover {
+        font-weight: bold;
+        font-size: 2px;
+    }
+    .sign {
+        width: 3vh;
+        height: 0.4vh;
+    }
+    .sign:hover {
+        border-width: 0.2px;
+    }
+    .intro-text h4 {
+        font-size: 10px;
+    }
+    .intro-text p {
+        font-size: 4px;
+        margin-bottom: 0.5vh;
+    }
+    .learn .learn-more {
+        border-width: 0.5px;
+        font-size: 2px;
+        width: 3vh;
+        height: 1vh;
+    }
+    .cover {
+        margin-top: 0.5vh;
+    }
+}
